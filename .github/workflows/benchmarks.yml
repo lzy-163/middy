@@ -37,7 +37,7 @@ jobs:
         uses: actions/cache@v1
         with:
           path: ./cache
-          key: ${{ runner.os }}-benchmark
+          key: ${{ runner.os }}-benchmark-${{ matrix.node-version }}
       - name: Store benchmark result
         uses: rhysd/github-action-benchmark@v1
         with:
